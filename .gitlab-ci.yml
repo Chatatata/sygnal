@@ -27,5 +27,8 @@ before_script:
 
 build:
   stage: build
+  tags:
+    - legion
+    - stms
   script:
     - docker build -t $CONTAINER_GROUP/$CONTAINER_NAME .

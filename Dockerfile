@@ -13,6 +13,7 @@ RUN touch /var/error_log
 RUN touch /var/sygnal.log
 RUN /setup.py install --verbose
 RUN pip install gunicorn
+RUN rm -f /sygnal/sygnal/**.py
 
 EXPOSE 8000
 

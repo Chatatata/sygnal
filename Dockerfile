@@ -15,6 +15,6 @@ RUN /setup.py install --verbose
 RUN pip install gunicorn
 RUN rm -f /sygnal/sygnal/**.py
 
-EXPOSE 8000
+EXPOSE 5004
 
-ENTRYPOINT ["/usr/local/bin/gunicorn", "--config", "/gunicorn_config.py", "-b", ":8000", "sygnal:app"]
+ENTRYPOINT ["/usr/local/bin/gunicorn", "--config", "/gunicorn_config.py", "-b", ":5004", "sygnal:app"]
